@@ -34,6 +34,7 @@
 		DF90C29428542B2000AB50A5 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
 		DF90C29628542B6F00AB50A5 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		DF90C29A28542D3100AB50A5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		DF90C29E2854490C00AB50A5 /* OpenWeather-Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "OpenWeather-Config.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 				DF90C2762854227800AB50A5 /* AppDelegate.swift */,
 				DF90C2782854227800AB50A5 /* SceneDelegate.swift */,
 				DF90C2842854227A00AB50A5 /* Info.plist */,
+				DF90C29E2854490C00AB50A5 /* OpenWeather-Config.xcconfig */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -244,6 +246,7 @@
 /* Begin XCBuildConfiguration section */
 		DF90C2852854227A00AB50A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF90C29E2854490C00AB50A5 /* OpenWeather-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -304,6 +307,7 @@
 		};
 		DF90C2862854227A00AB50A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF90C29E2854490C00AB50A5 /* OpenWeather-Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
