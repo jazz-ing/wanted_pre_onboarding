@@ -21,6 +21,7 @@
 		DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */; };
 		DF90C2A228544F0800AB50A5 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A128544F0800AB50A5 /* City.swift */; };
 		DF90C2A42854508300AB50A5 /* NetworkManagerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A32854508300AB50A5 /* NetworkManagerType.swift */; };
+		DF90C2A62854559F00AB50A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A52854559F00AB50A5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndPoint.swift; sourceTree = "<group>"; };
 		DF90C2A128544F0800AB50A5 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		DF90C2A32854508300AB50A5 /* NetworkManagerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerType.swift; sourceTree = "<group>"; };
+		DF90C2A52854559F00AB50A5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				DF90C29A28542D3100AB50A5 /* EndPointType.swift */,
 				DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */,
 				DF90C2A32854508300AB50A5 /* NetworkManagerType.swift */,
+				DF90C2A52854559F00AB50A5 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF90C2A62854559F00AB50A5 /* NetworkManager.swift in Sources */,
 				DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */,
 				DF90C27B2854227800AB50A5 /* ViewController.swift in Sources */,
 				DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */,
