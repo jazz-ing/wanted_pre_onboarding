@@ -13,6 +13,10 @@
 		DF90C27E2854227800AB50A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF90C27C2854227800AB50A5 /* Main.storyboard */; };
 		DF90C2802854227A00AB50A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF90C27F2854227A00AB50A5 /* Assets.xcassets */; };
 		DF90C2832854227A00AB50A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF90C2812854227A00AB50A5 /* LaunchScreen.storyboard */; };
+		DF90C2912854258300AB50A5 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2902854258300AB50A5 /* CurrentWeather.swift */; };
+		DF90C2932854296B00AB50A5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2922854296B00AB50A5 /* Weather.swift */; };
+		DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29428542B2000AB50A5 /* WeatherInformation.swift */; };
+		DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29628542B6F00AB50A5 /* Wind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		DF90C27F2854227A00AB50A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF90C2822854227A00AB50A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF90C2842854227A00AB50A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF90C2902854258300AB50A5 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		DF90C2922854296B00AB50A5 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		DF90C29428542B2000AB50A5 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		DF90C29628542B6F00AB50A5 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,10 @@
 		DF90C28F285422B400AB50A5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DF90C2902854258300AB50A5 /* CurrentWeather.swift */,
+				DF90C2922854296B00AB50A5 /* Weather.swift */,
+				DF90C29428542B2000AB50A5 /* WeatherInformation.swift */,
+				DF90C29628542B6F00AB50A5 /* Wind.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,8 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF90C27B2854227800AB50A5 /* ViewController.swift in Sources */,
+				DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */,
+				DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */,
 				DF90C2772854227800AB50A5 /* AppDelegate.swift in Sources */,
+				DF90C2912854258300AB50A5 /* CurrentWeather.swift in Sources */,
 				DF90C2792854227800AB50A5 /* SceneDelegate.swift in Sources */,
+				DF90C2932854296B00AB50A5 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
