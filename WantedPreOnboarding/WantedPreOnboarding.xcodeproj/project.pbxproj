@@ -17,6 +17,7 @@
 		DF90C2932854296B00AB50A5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2922854296B00AB50A5 /* Weather.swift */; };
 		DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29428542B2000AB50A5 /* WeatherInformation.swift */; };
 		DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29628542B6F00AB50A5 /* Wind.swift */; };
+		DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29A28542D3100AB50A5 /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DF90C2922854296B00AB50A5 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		DF90C29428542B2000AB50A5 /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
 		DF90C29628542B6F00AB50A5 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		DF90C29A28542D3100AB50A5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				DF90C28F285422B400AB50A5 /* Models */,
+				DF90C29928542CC500AB50A5 /* Networking */,
 				DF90C28E285422AF00AB50A5 /* Views */,
 				DF90C28D285422A500AB50A5 /* Controllers */,
 			);
@@ -125,6 +128,14 @@
 				DF90C29628542B6F00AB50A5 /* Wind.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DF90C29928542CC500AB50A5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DF90C29A28542D3100AB50A5 /* EndPointType.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */,
 				DF90C27B2854227800AB50A5 /* ViewController.swift in Sources */,
 				DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */,
 				DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */,
