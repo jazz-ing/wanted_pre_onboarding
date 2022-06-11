@@ -18,6 +18,8 @@
 		DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29428542B2000AB50A5 /* WeatherInformation.swift */; };
 		DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29628542B6F00AB50A5 /* Wind.swift */; };
 		DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29A28542D3100AB50A5 /* EndPointType.swift */; };
+		DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */; };
+		DF90C2A228544F0800AB50A5 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A128544F0800AB50A5 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DF90C29628542B6F00AB50A5 /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		DF90C29A28542D3100AB50A5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		DF90C29E2854490C00AB50A5 /* OpenWeather-Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "OpenWeather-Config.xcconfig"; sourceTree = "<group>"; };
+		DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndPoint.swift; sourceTree = "<group>"; };
+		DF90C2A128544F0800AB50A5 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 				DF90C2922854296B00AB50A5 /* Weather.swift */,
 				DF90C29428542B2000AB50A5 /* WeatherInformation.swift */,
 				DF90C29628542B6F00AB50A5 /* Wind.swift */,
+				DF90C2A128544F0800AB50A5 /* City.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DF90C29A28542D3100AB50A5 /* EndPointType.swift */,
+				DF90C29F28544D1600AB50A5 /* WeatherEndPoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -213,9 +219,11 @@
 			files = (
 				DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */,
 				DF90C27B2854227800AB50A5 /* ViewController.swift in Sources */,
+				DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */,
 				DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */,
 				DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */,
 				DF90C2772854227800AB50A5 /* AppDelegate.swift in Sources */,
+				DF90C2A228544F0800AB50A5 /* City.swift in Sources */,
 				DF90C2912854258300AB50A5 /* CurrentWeather.swift in Sources */,
 				DF90C2792854227800AB50A5 /* SceneDelegate.swift in Sources */,
 				DF90C2932854296B00AB50A5 /* Weather.swift in Sources */,
