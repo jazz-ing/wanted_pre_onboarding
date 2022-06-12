@@ -9,7 +9,7 @@ import Foundation
 
 enum WeatherEndPoint: EndPointType {
     
-    case getCurrentWeather(city: City)
+    case getCurrentWeather(city: String)
     
     private var apiKey: String? {
         return Bundle.main.infoDictionary?["API_KEY"] as? String
@@ -27,8 +27,7 @@ enum WeatherEndPoint: EndPointType {
         switch self {
         case .getCurrentWeather(let city):
             return [
-                "lat": city.latitude,
-                "lon": city.longitude,
+                "q": city,
                 "appid": apiKey ?? "",
                 "lang": "kr"
             ]
