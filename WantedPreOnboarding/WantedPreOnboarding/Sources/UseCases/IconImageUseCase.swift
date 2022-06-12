@@ -23,7 +23,7 @@ enum IconImageUseCaseError: LocalizedError {
 protocol IconImageUseCaseType {
     
     func fetchThumbnail(
-        from urlString: String,
+        of iconID: String,
         completion: @escaping (Result<UIImage, Error>) -> Void
     ) -> URLSessionDataTask?
 }
@@ -44,16 +44,18 @@ final class IconImageUseCase: IconImageUseCaseType {
     // MARK: Icon image fetching method
 
     func fetchThumbnail(
-        from urlString: String,
+        of iconID: String,
         completion: @escaping (Result<UIImage, Error>) -> Void
     ) -> URLSessionDataTask? {
-        let cacheKey = NSString(string: urlString)
+        let iconURL = "https://openweathermap.org/img/wn/\(iconID)@2x.png"
+        
+        let cacheKey = NSString(string: iconURL)
         if let cachedImage = imageCache.object(forKey: cacheKey) {
             completion(.success(cachedImage))
             return nil
         }
         
-        let task = networkManager.request(to: urlString) { [weak self] result in
+        let task = networkManager.request(to: iconURL) { [weak self] result in
             switch result {
             case .success(let imageData):
                 guard let image = UIImage(data: imageData) else {
