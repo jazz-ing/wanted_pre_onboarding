@@ -26,6 +26,7 @@
 		DF90C2AA2855C8DF00AB50A5 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */; };
 		DF90C2AD2855CE4D00AB50A5 /* IconImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */; };
 		DF90C2B12855D5AF00AB50A5 /* WeatherTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2B02855D5AF00AB50A5 /* WeatherTableViewDatasource.swift */; };
+		DF90C2B62855D9AF00AB50A5 /* DecodingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2B52855D9AF00AB50A5 /* DecodingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImageUseCase.swift; sourceTree = "<group>"; };
 		DF90C2B02855D5AF00AB50A5 /* WeatherTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewDatasource.swift; sourceTree = "<group>"; };
+		DF90C2B52855D9AF00AB50A5 /* DecodingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				DF90C2AB2855CE2F00AB50A5 /* UseCases */,
 				DF90C28E285422AF00AB50A5 /* Views */,
 				DF90C28D285422A500AB50A5 /* Controllers */,
+				DF90C2B42855D98000AB50A5 /* Utils */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -170,6 +173,14 @@
 				DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DF90C2B42855D98000AB50A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF90C2B52855D9AF00AB50A5 /* DecodingManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 				DF90C2772854227800AB50A5 /* AppDelegate.swift in Sources */,
 				DF90C2A228544F0800AB50A5 /* City.swift in Sources */,
 				DF90C2912854258300AB50A5 /* CurrentWeather.swift in Sources */,
+				DF90C2B62855D9AF00AB50A5 /* DecodingManager.swift in Sources */,
 				DF90C2A828548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift in Sources */,
 				DF90C2792854227800AB50A5 /* SceneDelegate.swift in Sources */,
 				DF90C2AA2855C8DF00AB50A5 /* CurrentWeatherData.swift in Sources */,
