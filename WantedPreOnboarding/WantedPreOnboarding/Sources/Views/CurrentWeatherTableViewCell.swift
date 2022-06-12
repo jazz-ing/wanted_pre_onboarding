@@ -17,4 +17,14 @@ class CurrentWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+    
+    func configureContents(from data: CurrentWeatherData) {
+        cityNameLabel.text = data.city
+        temperatureLabel.text = data.temperature
+        humidityLabel.text = data.humidity
+    }
+    
+    func configure(image: UIImage) {
+        currentWeatherImageView.image = image
+    }
 }
