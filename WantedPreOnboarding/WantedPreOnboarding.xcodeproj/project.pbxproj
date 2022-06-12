@@ -25,6 +25,7 @@
 		DF90C2A828548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A728548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift */; };
 		DF90C2AA2855C8DF00AB50A5 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */; };
 		DF90C2AD2855CE4D00AB50A5 /* IconImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */; };
+		DF90C2B12855D5AF00AB50A5 /* WeatherTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2B02855D5AF00AB50A5 /* WeatherTableViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		DF90C2A728548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
 		DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImageUseCase.swift; sourceTree = "<group>"; };
+		DF90C2B02855D5AF00AB50A5 /* WeatherTableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				DF90C27A2854227800AB50A5 /* MainWeatherViewController.swift */,
+				DF90C2B02855D5AF00AB50A5 /* WeatherTableViewDatasource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				DF90C2A62854559F00AB50A5 /* NetworkManager.swift in Sources */,
 				DF90C29B28542D3100AB50A5 /* EndPointType.swift in Sources */,
+				DF90C2B12855D5AF00AB50A5 /* WeatherTableViewDatasource.swift in Sources */,
 				DF90C27B2854227800AB50A5 /* MainWeatherViewController.swift in Sources */,
 				DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */,
 				DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */,
