@@ -8,7 +8,9 @@
 import UIKit
 
 class CurrentWeatherTableViewCell: UITableViewCell {
-    
+
+    // MARK: Property
+
     static let reuseIdentifier = String(describing: CurrentWeatherTableViewCell.self)
 
     // MARK: IBOutlets
@@ -17,6 +19,25 @@ class CurrentWeatherTableViewCell: UITableViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
+
+    // MARK: Override
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        resetContents()
+    }
+}
+
+// MARK: - Cell contents configuring methods
+
+extension CurrentWeatherTableViewCell {
+
+    private func resetContents() {
+        currentWeatherImageView.image = nil
+        cityNameLabel.text = nil
+        temperatureLabel.text = nil
+        humidityLabel.text = nil
+    }
     
     func configureContents(from data: CurrentWeatherData) {
         cityNameLabel.text = data.city
