@@ -24,6 +24,7 @@
 		DF90C2A62854559F00AB50A5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A52854559F00AB50A5 /* NetworkManager.swift */; };
 		DF90C2A828548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A728548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift */; };
 		DF90C2AA2855C8DF00AB50A5 /* CurrentWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */; };
+		DF90C2AD2855CE4D00AB50A5 /* IconImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		DF90C2A52854559F00AB50A5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DF90C2A728548C3C00AB50A5 /* CurrentWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		DF90C2A92855C8DF00AB50A5 /* CurrentWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherData.swift; sourceTree = "<group>"; };
+		DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconImageUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				DF90C28F285422B400AB50A5 /* Models */,
 				DF90C29928542CC500AB50A5 /* Networking */,
+				DF90C2AB2855CE2F00AB50A5 /* UseCases */,
 				DF90C28E285422AF00AB50A5 /* Views */,
 				DF90C28D285422A500AB50A5 /* Controllers */,
 			);
@@ -156,6 +159,14 @@
 				DF90C2A52854559F00AB50A5 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		DF90C2AB2855CE2F00AB50A5 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				DF90C2AC2855CE4D00AB50A5 /* IconImageUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 				DF90C2A028544D1600AB50A5 /* WeatherEndPoint.swift in Sources */,
 				DF90C29528542B2000AB50A5 /* WeatherInformation.swift in Sources */,
 				DF90C2A42854508300AB50A5 /* NetworkManagerType.swift in Sources */,
+				DF90C2AD2855CE4D00AB50A5 /* IconImageUseCase.swift in Sources */,
 				DF90C29728542B6F00AB50A5 /* Wind.swift in Sources */,
 				DF90C2772854227800AB50A5 /* AppDelegate.swift in Sources */,
 				DF90C2A228544F0800AB50A5 /* City.swift in Sources */,
