@@ -35,7 +35,16 @@ final class MainWeatherViewController: UIViewController {
     
     private var tableViewDatasource: WeatherTableViewDatasource?
     private let weatherDataUseCase = WeatherDataUseCase()
-    private var state: State = .loading
+    private var state: State = .loading {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableViewDatasource?.datas = self.state.weatherDatas
+                self.fetchCurrentWeather()
+                self.weatherTableView.reloadData()
+            }
+        }
+    }
+
 
     // MARK: View lifecycle
 
