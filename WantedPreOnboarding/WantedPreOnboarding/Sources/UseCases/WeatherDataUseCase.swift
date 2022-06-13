@@ -77,6 +77,7 @@ final class WeatherDataUseCase: WeatherDataUseCaseType {
                 case .success(let currentWeather):
                     if self?.index == self?.lastIndex {
                         self?.isLastData = true
+                        completion(.success(currentWeather))
                         return
                     }
                     self?.index += 1
