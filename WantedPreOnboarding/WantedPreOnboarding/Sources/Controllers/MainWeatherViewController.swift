@@ -82,12 +82,59 @@ extension MainWeatherViewController {
 
         let weatherData = CurrentWeatherData(
             iconID: currentWeather.weather[0].iconID,
-            city: currentWeather.cityName,
+            city: convertToKorean(from: currentWeather.cityName),
             temperature: temperature,
             humidity: humidity
         )
         var weatherDatas = state.weatherDatas
         weatherDatas.append(weatherData)
         state = .populated(weatherDatas)
+    }
+
+    private func convertToKorean(from cityName: String) -> String {
+        switch cityName {
+        case "Gongju":
+            return "공주"
+        case "Gwangju":
+            return "광주"
+        case "Gumi":
+            return "구미"
+        case "Gunsan":
+            return "군산"
+        case "Daegu":
+            return "대구"
+        case "Daejeon":
+            return "대전"
+        case "Mokpo":
+            return "목포"
+        case "Busan":
+            return "부산"
+        case "Seosan City":
+            return "서산"
+        case "Seoul":
+            return "서울"
+        case "Sokcho":
+            return "속초"
+        case "Suwon-si":
+            return "수원"
+        case "Suncheon":
+            return "순천"
+        case "Ulsan":
+            return "울산"
+        case "Iksan":
+            return "익산"
+        case "Jeonju":
+            return "전주"
+        case "Jeju City":
+            return "제주"
+        case "Cheonan":
+            return "천안"
+        case "Chungju":
+            return "충주"
+        case "Chuncheon":
+            return "춘천"
+        default:
+            return "진행중"
+        }
     }
 }
