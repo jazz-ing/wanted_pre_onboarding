@@ -21,11 +21,11 @@ enum IconImageUseCaseError: LocalizedError {
 }
 
 protocol IconImageUseCaseType {
-    
+
     func fetchThumbnail(
         of iconID: String,
         completion: @escaping (Result<UIImage, Error>) -> Void
-    ) -> URLSessionDataTask?
+    )
 }
 
 final class IconImageUseCase: IconImageUseCaseType {
@@ -33,6 +33,7 @@ final class IconImageUseCase: IconImageUseCaseType {
     // MARK: Properties
 
     private let networkManager: NetworkManagerType
+    private var iconImageTask: URLSessionDataTask?
     private var imageCache = NSCache<NSString, UIImage>()
     
     // MARK: Initializer
@@ -46,16 +47,20 @@ final class IconImageUseCase: IconImageUseCaseType {
     func fetchThumbnail(
         of iconID: String,
         completion: @escaping (Result<UIImage, Error>) -> Void
-    ) -> URLSessionDataTask? {
+    ) {
         let iconURL = "https://openweathermap.org/img/wn/\(iconID)@2x.png"
+        
+        if let task = iconImageTask {
+            task.cancel()
+        }
         
         let cacheKey = NSString(string: iconURL)
         if let cachedImage = imageCache.object(forKey: cacheKey) {
             completion(.success(cachedImage))
-            return nil
+            return
         }
         
-        let task = networkManager.request(to: iconURL) { [weak self] result in
+        iconImageTask = networkManager.request(to: iconURL) { [weak self] result in
             switch result {
             case .success(let imageData):
                 guard let image = UIImage(data: imageData) else {
@@ -68,7 +73,6 @@ final class IconImageUseCase: IconImageUseCaseType {
                 completion(.failure(networkError))
             }
         }
-        task?.resume()
-        return task
+        iconImageTask?.resume()
     }
 }
