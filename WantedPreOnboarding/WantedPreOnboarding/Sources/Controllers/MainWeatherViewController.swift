@@ -50,6 +50,7 @@ final class MainWeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationBar()
         setTableViewDelegate()
         fetchCurrentWeather()
     }
@@ -58,7 +59,11 @@ final class MainWeatherViewController: UIViewController {
 // MARK: - TableView configuring method
 
 extension MainWeatherViewController {
-    
+
+    private func setNavigationBar() {
+        self.navigationItem.title = "지금의 날씨"
+    }
+
     private func setTableViewDelegate() {
         tableViewDatasource = WeatherTableViewDatasource(with: state.weatherDatas)
         weatherTableView.dataSource = tableViewDatasource
