@@ -89,8 +89,8 @@ extension MainWeatherViewController: MainViewControllerDelegate {
         weatherTableView.delegate = tableViewDelegate
     }
     
-    func selectedCell(row: Int) {
-        
+    func selectedCell(indexPath: IndexPath) {
+        weatherTableView.deselectRow(at: indexPath, animated: false)
     }
     
     func fetchCurrentWeather() {

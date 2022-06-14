@@ -10,7 +10,7 @@ import UIKit
 
 protocol MainViewControllerDelegate: AnyObject {
 
-    func selectedCell(row: Int)
+    func selectedCell(indexPath: IndexPath)
 }
 
 final class WeatherTableViewDelegate: NSObject {
@@ -32,6 +32,6 @@ final class WeatherTableViewDelegate: NSObject {
 extension WeatherTableViewDelegate: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.selectedCell(row: indexPath.row)
+        self.delegate?.selectedCell(indexPath: indexPath)
     }
 }
