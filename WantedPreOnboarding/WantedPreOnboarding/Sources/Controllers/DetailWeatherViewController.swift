@@ -46,6 +46,7 @@ extension DetailWeatherViewController {
     
     private func configureLabels() {
         guard let currentWeather = currentWeather else {
+            showAlert(error: DetailViewError.dataPassingFail)
             return
         }
         
@@ -78,8 +79,10 @@ extension DetailWeatherViewController {
                     DispatchQueue.main.async {
                         self?.iconImageView.image = image
                     }
-                case .failure(let error):
-                    print(error)
+                case .failure(_):
+                    DispatchQueue.main.async {
+                        self?.iconImageView.image = UIImage(named: "imageDownloadFail")
+                    }
                 }
             }
         }
@@ -138,3 +141,16 @@ extension DetailWeatherViewController {
     }
 }
 
+extension DetailWeatherViewController {
+    
+    enum DetailViewError: LocalizedError {
+        case dataPassingFail
+        
+        var errorDescription: String? {
+            switch self {
+            case .dataPassingFail:
+                return "데이터를 불러오는 데 실패했습니다."
+            }
+        }
+    }
+}
