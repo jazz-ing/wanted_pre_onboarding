@@ -100,10 +100,46 @@
                     </view>
                     <navigationItem key="navigationItem" id="zgj-xv-A0D"/>
                     <connections>
+                        <outlet property="errorLabel" destination="io4-r0-e4J" id="JNx-sg-aKB"/>
+                        <outlet property="errorView" destination="SBn-cN-NBz" id="Cni-Sv-maX"/>
+                        <outlet property="loadingView" destination="BSU-I5-J0Y" id="cSW-DZ-AWy"/>
                         <outlet property="weatherTableView" destination="FQx-rB-hbD" id="Thd-dX-IJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="SBn-cN-NBz" userLabel="Error View">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="388"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="io4-r0-e4J">
+                            <rect key="frame" x="99" y="183.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="EYf-zE-71A"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="io4-r0-e4J" firstAttribute="centerX" secondItem="SBn-cN-NBz" secondAttribute="centerX" id="7wT-Bs-nbg"/>
+                        <constraint firstItem="io4-r0-e4J" firstAttribute="centerY" secondItem="SBn-cN-NBz" secondAttribute="centerY" id="Lcz-w3-FYv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" id="BSU-I5-J0Y" userLabel="Loading View">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5GJ-hX-PMs">
+                            <rect key="frame" x="101.5" y="67.5" width="37" height="37"/>
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="3ab-fp-Za7"/>
+                    <constraints>
+                        <constraint firstItem="5GJ-hX-PMs" firstAttribute="centerY" secondItem="3ab-fp-Za7" secondAttribute="centerY" id="e1t-jS-6hp"/>
+                        <constraint firstItem="5GJ-hX-PMs" firstAttribute="centerX" secondItem="3ab-fp-Za7" secondAttribute="centerX" id="hxm-Vu-fgV"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="-468.11594202898556" y="213.61607142857142"/>
         </scene>

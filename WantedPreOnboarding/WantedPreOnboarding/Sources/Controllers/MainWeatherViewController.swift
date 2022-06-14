@@ -9,16 +9,18 @@ import UIKit
 
 final class MainWeatherViewController: UIViewController {
     
-    // MARK: IBOutlet
+    // MARK: IBOutlets
     
     @IBOutlet weak var weatherTableView: UITableView!
-
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var loadingView: UIView!
+    
     // MARK: TableView state
 
     enum State {
         case loading
         case populated([CurrentWeatherData])
-        case empty
         case error(Error)
         
         var weatherDatas: [CurrentWeatherData] {
@@ -40,6 +42,7 @@ final class MainWeatherViewController: UIViewController {
     private var state: State = .loading {
         didSet {
             DispatchQueue.main.async {
+                self.setFooterView()
                 self.tableViewDatasource?.datas = self.state.weatherDatas
                 self.fetchCurrentWeather()
                 self.weatherTableView.reloadData()
@@ -87,6 +90,18 @@ extension MainWeatherViewController: MainViewControllerDelegate {
         tableViewDelegate = WeatherTableViewDelegate(withDelegate: self)
         weatherTableView.dataSource = tableViewDatasource
         weatherTableView.delegate = tableViewDelegate
+    }
+    
+    private func setFooterView() {
+      switch state {
+      case .error(let error):
+        errorLabel.text = error.localizedDescription
+        weatherTableView.tableFooterView = errorView
+      case .loading:
+          weatherTableView.tableFooterView = loadingView
+      case .populated:
+          weatherTableView.tableFooterView = nil
+      }
     }
     
     func selectedCell(indexPath: IndexPath) {
