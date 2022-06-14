@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CurrentWeatherTableViewCell: UITableViewCell {
+final class CurrentWeatherTableViewCell: UITableViewCell {
 
     // MARK: Property
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailWeatherViewController: UIViewController {
+final class DetailWeatherViewController: UIViewController {
 
     // MARK: IBOutlets
 
