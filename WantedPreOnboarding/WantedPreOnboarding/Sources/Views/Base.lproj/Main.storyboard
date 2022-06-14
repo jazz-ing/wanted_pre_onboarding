@@ -83,6 +83,7 @@
                                             <outlet property="currentWeatherImageView" destination="h2K-2c-c0b" id="zei-3c-ses"/>
                                             <outlet property="humidityLabel" destination="Mca-Pq-Tvo" id="F9v-qB-mQ4"/>
                                             <outlet property="temperatureLabel" destination="0oA-ow-3n9" id="fIR-Rg-dNt"/>
+                                            <segue destination="8RP-vL-Bsa" kind="show" identifier="ShowDetailView" id="ba5-AP-hAA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q00-yb-pdn">
-                                <rect key="frame" x="60" y="79" width="54" height="116"/>
+                                <rect key="frame" x="60" y="175" width="54" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -374,6 +375,7 @@
                             <constraint firstItem="wD1-O4-nMT" firstAttribute="trailing" secondItem="hnI-rB-ND0" secondAttribute="trailing" constant="40" id="xDY-ot-7UY"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="k70-qC-efa"/>
                     <connections>
                         <outlet property="cityNameLabel" destination="q00-yb-pdn" id="erN-nA-iRc"/>
                         <outlet property="currentTemperatureLabel" destination="HPf-ce-vcM" id="ULq-2Q-jyJ"/>

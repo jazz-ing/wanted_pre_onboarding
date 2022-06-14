@@ -36,12 +36,30 @@ final class MainWeatherViewController: UIViewController {
     private var tableViewDatasource: WeatherTableViewDatasource?
     private var tableViewDelegate: WeatherTableViewDelegate?
     private let weatherDataUseCase = WeatherDataUseCase()
+    private var currentWeatherData: [CurrentWeather] = []
     private var state: State = .loading {
         didSet {
             DispatchQueue.main.async {
                 self.tableViewDatasource?.datas = self.state.weatherDatas
                 self.fetchCurrentWeather()
                 self.weatherTableView.reloadData()
+            }
+        }
+    }
+
+    // MARK: Override
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let segueIdentifier = segue.identifier {
+            switch segueIdentifier {
+            case "ShowDetailView":
+                if let cell = sender as? CurrentWeatherTableViewCell,
+                   let indexPath = weatherTableView.indexPath(for: cell),
+                   let detailViewController = segue.destination as? DetailWeatherViewController {
+                    detailViewController.currentWeather = currentWeatherData[indexPath.row]
+                }
+            default:
+                break
             }
         }
     }
@@ -80,6 +98,7 @@ extension MainWeatherViewController: MainViewControllerDelegate {
             switch result {
             case .success(let currentWeather):
                 self?.setContents(from: currentWeather)
+                self?.currentWeatherData.append(currentWeather)
             case .failure(let error):
                 self?.state = .error(error)
             }

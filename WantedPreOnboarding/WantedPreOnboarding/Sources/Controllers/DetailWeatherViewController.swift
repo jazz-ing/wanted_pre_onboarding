@@ -24,7 +24,7 @@ class DetailWeatherViewController: UIViewController {
 
     // MARK: Properties
 
-    private(set) var currentWeather: CurrentWeather?
+    var currentWeather: CurrentWeather?
 
     // MARK: View lifecycle
 
