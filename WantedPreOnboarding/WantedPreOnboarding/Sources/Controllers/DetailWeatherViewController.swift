@@ -11,7 +11,6 @@ class DetailWeatherViewController: UIViewController {
 
     // MARK: IBOutlets
 
-    @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
@@ -31,6 +30,7 @@ class DetailWeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationTitle()
         configureContents()
     }
 }
@@ -38,6 +38,12 @@ class DetailWeatherViewController: UIViewController {
 // MARK: - View configuring method
 
 extension DetailWeatherViewController {
+    
+    private func setNavigationTitle() {
+        if let currentWeather = currentWeather {
+            navigationItem.title = convertToKorean(from: currentWeather.cityName)
+        }
+    }
     
     private func configureContents() {
         configureIconImage()
@@ -54,10 +60,8 @@ extension DetailWeatherViewController {
         let maximumTemperature = converToCelsius(from: currentWeather.information.maximumTemperature)
         let minimumTemperature = converToCelsius(from: currentWeather.information.minimumTemperature)
         let windChill = converToCelsius(from: currentWeather.information.windChill)
-        
-        cityNameLabel.text = convertToKorean(from: currentWeather.cityName)
+
         descriptionLabel.text = currentWeather.weather[0].description
-        
         currentTemperatureLabel.text = "\(currentTemperature)℃"
         maximumTemperatureLabel.text = "\(maximumTemperature)℃"
         minimumTemperatureLabel.text = "\(minimumTemperature)℃"
