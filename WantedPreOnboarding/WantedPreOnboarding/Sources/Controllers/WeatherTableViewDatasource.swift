@@ -51,7 +51,11 @@ extension WeatherTableViewDatasource: UITableViewDataSource {
                     cell.configure(image: image)
                 }
             case .failure(_):
-                break
+                if let errorImage = UIImage(named: "imageDownloadFail") {
+                    DispatchQueue.main.async {
+                        cell.configure(image: errorImage)
+                    }
+                }
             }
         }
 

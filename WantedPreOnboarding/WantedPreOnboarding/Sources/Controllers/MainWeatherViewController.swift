@@ -82,7 +82,7 @@ final class MainWeatherViewController: UIViewController {
 extension MainWeatherViewController: MainViewControllerDelegate {
 
     private func setNavigationBar() {
-        self.navigationItem.title = "지금의 날씨"
+        self.navigationItem.title = "오늘의 날씨"
     }
 
     private func setTableViewDelegate() {
