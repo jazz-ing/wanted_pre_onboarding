@@ -34,6 +34,7 @@ final class MainWeatherViewController: UIViewController {
     // MARK: Properties
     
     private var tableViewDatasource: WeatherTableViewDatasource?
+    private var tableViewDelegate: WeatherTableViewDelegate?
     private let weatherDataUseCase = WeatherDataUseCase()
     private var state: State = .loading {
         didSet {
@@ -44,7 +45,6 @@ final class MainWeatherViewController: UIViewController {
             }
         }
     }
-
 
     // MARK: View lifecycle
 
@@ -58,7 +58,7 @@ final class MainWeatherViewController: UIViewController {
 
 // MARK: - TableView configuring method
 
-extension MainWeatherViewController {
+extension MainWeatherViewController: MainViewControllerDelegate {
 
     private func setNavigationBar() {
         self.navigationItem.title = "지금의 날씨"
@@ -66,7 +66,13 @@ extension MainWeatherViewController {
 
     private func setTableViewDelegate() {
         tableViewDatasource = WeatherTableViewDatasource(with: state.weatherDatas)
+        tableViewDelegate = WeatherTableViewDelegate(withDelegate: self)
         weatherTableView.dataSource = tableViewDatasource
+        weatherTableView.delegate = tableViewDelegate
+    }
+    
+    func selectedCell(row: Int) {
+        
     }
     
     func fetchCurrentWeather() {
