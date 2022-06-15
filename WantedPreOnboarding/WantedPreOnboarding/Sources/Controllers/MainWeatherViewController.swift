@@ -37,7 +37,8 @@ final class MainWeatherViewController: UIViewController {
     
     private var tableViewDatasource: WeatherTableViewDatasource?
     private var tableViewDelegate: WeatherTableViewDelegate?
-    private let weatherDataUseCase = WeatherDataUseCase()
+    var weatherDataUseCase: WeatherDataUseCaseType?
+    var iconImageUseCase: IconImageUseCaseType?
     private var currentWeatherData: [CurrentWeather] = []
     private var state: State = .loading {
         didSet {
@@ -60,6 +61,7 @@ final class MainWeatherViewController: UIViewController {
                    let indexPath = weatherTableView.indexPath(for: cell),
                    let detailViewController = segue.destination as? DetailWeatherViewController {
                     detailViewController.currentWeather = currentWeatherData[indexPath.row]
+                    detailViewController.iconImageUseCase = iconImageUseCase
                 }
             default:
                 break
@@ -93,15 +95,15 @@ extension MainWeatherViewController: MainViewControllerDelegate {
     }
     
     private func setFooterView() {
-      switch state {
-      case .error(let error):
-        errorLabel.text = error.localizedDescription
-        weatherTableView.tableFooterView = errorView
-      case .loading:
-          weatherTableView.tableFooterView = loadingView
-      case .populated:
-          weatherTableView.tableFooterView = nil
-      }
+        switch state {
+        case .error(let error):
+            errorLabel.text = error.localizedDescription
+            weatherTableView.tableFooterView = errorView
+        case .loading:
+            weatherTableView.tableFooterView = loadingView
+        case .populated:
+            weatherTableView.tableFooterView = nil
+        }
     }
     
     func selectedCell(indexPath: IndexPath) {
@@ -109,7 +111,7 @@ extension MainWeatherViewController: MainViewControllerDelegate {
     }
     
     func fetchCurrentWeather() {
-        weatherDataUseCase.fetchCurrentWeather { [weak self] result in
+        weatherDataUseCase?.fetchCurrentWeather { [weak self] result in
             switch result {
             case .success(let currentWeather):
                 self?.setContents(from: currentWeather)

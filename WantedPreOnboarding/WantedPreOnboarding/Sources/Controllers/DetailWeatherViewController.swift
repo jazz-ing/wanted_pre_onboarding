@@ -24,7 +24,7 @@ final class DetailWeatherViewController: UIViewController {
     // MARK: Properties
 
     var currentWeather: CurrentWeather?
-    private var iconImageUseCase: IconImageUseCaseType?
+    var iconImageUseCase: IconImageUseCaseType?
 
     // MARK: View lifecycle
 
@@ -72,8 +72,6 @@ extension DetailWeatherViewController {
     }
     
     private func configureIconImage() {
-        iconImageUseCase = IconImageUseCase()
-        
         if let currentWeather = currentWeather {
             iconImageUseCase?.fetchThumbnail(
                 of: currentWeather.weather[0].iconID

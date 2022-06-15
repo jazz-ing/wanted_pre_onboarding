@@ -17,5 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let _ = (scene as? UIWindowScene) else { return }
+
+        if let navigationController = window?.rootViewController as? UINavigationController,
+           let mainWeatherViewController = navigationController.topViewController
+            as? MainWeatherViewController
+        {
+            mainWeatherViewController.weatherDataUseCase = WeatherDataUseCase()
+            mainWeatherViewController.iconImageUseCase = IconImageUseCase()
+        }
     }
 }
