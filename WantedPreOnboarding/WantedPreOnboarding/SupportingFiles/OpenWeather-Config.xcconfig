@@ -1,0 +1,11 @@
+//
+//  OpenWeather-Config.xcconfig
+//  WantedPreOnboarding
+//
+//  Created by 이윤주 on 2022/06/11.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = 1af72e89e05d364984fe32463122135f
